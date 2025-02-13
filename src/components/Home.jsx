@@ -6,20 +6,30 @@ import Ballpit from "./Ballpit";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div className="relative">
-      <div className="absolute inset-0 z-0 hidden md:block">
+      <div className="absolute inset-0 z-0">
         <Ballpit
-          count={140}
+          count={isMobile ? 70 : 140} // Reduce count for mobile
           gravity={0.5}
           friction={0.99}
           wallBounce={0.95}
           followCursor={false}
+          minSize={isMobile ? 0.4 : 0.4} // Reduce size for mobile
+          maxSize={isMobile ? 0.7 : 0.9}
         />
       </div>
 
@@ -59,7 +69,7 @@ const Home = () => {
             {/* Buttons Section */}
             <div className="flex space-x-4 mt-6 font-serif flex-wrap justify-center">
               <a
-                href="#contact" // Scrolls to the Contact section
+                href="#contact"
                 className="bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 transition duration-300 ease-in-out shadow-md transform"
               >
                 Hire Me
