@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import TypingEffect from "react-typing-effect";
 import manimg from "../assets/man.jpg"; // Adjusted image path if necessary
-import { email_ID, FaceBook, Git, Insta, Linkedin, Resume } from "./link";
+import { email_ID, FaceBook, Git, Insta, Linkedin, Resume } from "../data/link";
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);

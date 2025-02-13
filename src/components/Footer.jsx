@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"; // Optional: for routing links in the footer
-import { email_ID, FaceBook, Git, Insta, Linkedin } from "./link";
+import { email_ID, FaceBook, Git, Insta, Linkedin } from "../data/link";
 
 const Footer = () => {
   return (

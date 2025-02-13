@@ -1,4 +1,4 @@
-import { email_ID } from "./link";
+import { email_ID } from "../data/link";
 import { useState } from "react";
 
 const Contact = () => {

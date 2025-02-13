@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import manimg from "../assets/suyash1.jpg"; // Make sure the image path is correct
-import { Git, Resume } from "./link";
+import { Git, Resume } from "../data/link";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
