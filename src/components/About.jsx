@@ -30,7 +30,7 @@ const About = () => {
     >
       <div className="container md:pt-40 mx-auto px-4 flex flex-col justify-between md:flex-row items-center space-y-8 md:space-y-0">
         {/* Left Section: Photo */}
-        <div className="w-full md:w-[30%] w-[70%] md:max-w-[30%] max-w-[80%]">
+        <div className="w-full md:w-[30%] md:max-w-[30%] max-w-[80%]">
           {" "}
           {/* Adjusted mobile and desktop sizes */}
           <img
@@ -46,7 +46,7 @@ const About = () => {
             Suyash Dhumal
           </h3>
           <h4 className="text-lg md:text-xl text-gray-600 mt-2">
-            Software Developer | Web Developer 
+            Software Developer | Web Developer
           </h4>
           <p className="text-base md:text-lg text-gray-700 mt-4">
             Passionate about crafting dynamic and responsive web applications, I

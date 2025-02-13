@@ -4,7 +4,6 @@ import { useState } from "react";
 const Contact = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [message, setMessage] = useState("");
 
   return (
     <div
@@ -39,49 +38,49 @@ const Contact = () => {
 
         {/* Left Column - Contact Form */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center items-start">
-          <h2 className="text-2xl font-semibold text-center mb-4">
+          <h2 className="text-2xl font-semibold text-center mb-0">
             Available 24/7
           </h2>
-          <h3 className="text-xl text-center mb-6">Get In Touch</h3>
+          <h3 className="text-base text-center mb-4">Get In Touch</h3>
           <form className="space-y-6 w-full">
             {/* Email */}
-            <div className="relative space-y-2">
-              <label
-                htmlFor="email"
-                className={`absolute left-3 top-3 text-sm font-medium text-gray-700 transition-all duration-200 ${
-                  email ? "scale-75 top-0 left-2 text-blue-500" : ""
-                }`}
-              >
-                Email
-              </label>
+            <div className="relative">
               <input
                 id="email"
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                required
                 placeholder=" "
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                value={email} // Assuming email state is being used
+                onChange={(e) => setEmail(e.target.value)} // Update state as per your implementation
+                className="peer w-full p-3 pt-5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
+              <label
+                htmlFor="email"
+                className={`absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 text-sm font-medium bg-white px-2 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:left-3 peer-focus:text-slate-950 peer-focus:scale-90 ${
+                  email ? "scale-75 top-0 left-2 text-blue-500" : ""
+                }`}
+              >
+                Email <span className="text-red-500">*</span>
+              </label>
             </div>
 
             {/* Password */}
-            <div className="relative space-y-2">
-              <label
-                htmlFor="password"
-                className={`absolute left-3 top-3 text-sm font-medium text-gray-700 transition-all duration-200 ${
-                  password ? "scale-75 top-0 left-2 text-blue-500" : ""
-                }`}
-              >
-                Password
-              </label>
+            <div className="relative">
               <input
                 id="password"
                 type="password"
+                required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder=" "
-                className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 peer"
+                className="peer w-full p-3 pt-5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
+              <label
+                htmlFor="password"
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-700 text-sm font-medium bg-white px-2 transition-all duration-200 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:text-gray-500 peer-focus:top-0 peer-focus:left-3 peer-focus:text-slate-950 peer-focus:scale-90"
+              >
+                Password <span className="text-red-500">*</span>
+              </label>
             </div>
 
             {/* Message */}
@@ -93,7 +92,7 @@ const Contact = () => {
                 placeholder="Message"
                 className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 h-32 resize-none"
               />
-            </div>  
+            </div>
 
             <button
               type="submit"

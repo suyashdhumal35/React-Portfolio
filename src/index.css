@@ -8,7 +8,7 @@ html {
 }
 
 /* In a separate CSS file */
-input:focus~label,
+/* input:focus~label,
 textarea:focus~label,
 input:not(:placeholder-shown)~label,
 textarea:not(:placeholder-shown)~label {
@@ -16,4 +16,4 @@ textarea:not(:placeholder-shown)~label {
   transform: translateY(-250%);
   font-size: 0.75rem;
   color: #3182ce;
-}
+} */
