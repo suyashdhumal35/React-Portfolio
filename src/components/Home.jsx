@@ -38,7 +38,7 @@ const Home = () => {
         id="home"
         className="z-10 h-screen flex justify-center items-center border-2"
       >
-        <div className="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center h-full">
+        <div className="container mx-auto pb-20 md:px-4 flex flex-col-reverse md:flex-row items-center h-full">
           <div
             className={`md:w-1/2 w-full flex flex-col items-start space-y-4 transform transition-all duration-500 z-0 ${
               isVisible
@@ -88,19 +88,19 @@ const Home = () => {
             {/* Social Media Icons */}
             <div className="flex space-x-4 mt-4 justify-center">
               <a href={Git} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github text-2xl text-gray-700 hover:text-orange-600"></i>
+                <i className="fab fa-github text-2xl  text-slate-800 hover:text-orange-600"></i>
               </a>
               <a href={FaceBook} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook text-2xl text-gray-700 hover:text-orange-600"></i>
+                <i className="fab fa-facebook text-2xl text-slate-800 hover:text-orange-600"></i>
               </a>
               <a href={Insta} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram text-2xl text-gray-700 hover:text-orange-600"></i>
+                <i className="fab fa-instagram text-2xl text-slate-800 hover:text-orange-600"></i>
               </a>
               <a href={Linkedin} target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin text-2xl text-gray-700 hover:text-orange-600"></i>
+                <i className="fab fa-linkedin text-2xl text-slate-800 hover:text-orange-600"></i>
               </a>
               <a href={email_ID}>
-                <i className="fas fa-envelope text-2xl text-gray-700 hover:text-orange-600"></i>
+                <i className="fas fa-envelope text-2xl text-slate-800 hover:text-orange-600"></i>
               </a>
             </div>
           </div>
@@ -115,7 +115,9 @@ const Home = () => {
             <img
               src={manimg}
               alt="Suyash Dhumal"
-              className="w-full h-auto rounded-lg shadow-lg"
+              className={`w-full h-auto rounded-lg shadow-lg ${
+                isMobile ? "mt-8" : "" // Add margin top for mobile to move image up
+              }`}
             />
           </div>
         </div>
