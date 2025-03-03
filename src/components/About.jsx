@@ -97,6 +97,7 @@ const About = () => {
           <div className="mt-6">
             <a
               href={Resume}
+              download="MyResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-orange-500 text-white py-2 px-6 rounded-lg hover:bg-orange-600 focus:outline-none transition duration-300 font-serif"

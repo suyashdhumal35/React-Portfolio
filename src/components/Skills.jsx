@@ -6,8 +6,10 @@ const Skill = () => {
     { name: "Tailwind & Bootstrap", level: 80 },
     { name: "JavaScript", level: 80 },
     { name: "React JS", level: 70 },
-    { name: "Git ", level: 60 },
+    { name: "MongoDB", level: 60 },
     { name: "MySQL", level: 50 },
+    { name: "Node JS", level: 50 },
+    { name: "Git ", level: 60 },
   ];
 
   const [isVisible, setIsVisible] = useState(false);
