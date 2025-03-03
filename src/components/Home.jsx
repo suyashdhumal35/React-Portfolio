@@ -36,7 +36,7 @@ const Home = () => {
       {/* Content Section */}
       <section
   id="home"
-  className="relative z-10 min-h-screen flex justify-center items-center border-2 px-2 overflow-hidden"
+  className="relative z-10 min-h-screen flex justify-center items-center  px-2 overflow-hidden"
 >
   <div className="container mx-auto pb-20 md:px-4 flex flex-col-reverse md:flex-row items-center h-full">
     {/* Left Content */}
