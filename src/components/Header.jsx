@@ -14,7 +14,14 @@ function Header() {
         <div className="flex justify-between items-center w-full shadow-2xl rounded-lg bg-white p-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
-            <img src={pLogo} alt="Logo" className="h-9" />
+            <Link
+              to="home"
+              smooth={true}
+              duration={800}
+              className="cursor-pointer"
+            >
+              <img src={pLogo} alt="Logo" className="h-9" />
+            </Link>
           </div>
 
           {/* Desktop Navigation Menu */}
@@ -96,9 +103,8 @@ function Header() {
 
       {/* Mobile Navigation Menu */}
       <div
-        className={`md:hidden bg-white shadow-2xl ${
-          isMenuOpen ? "block" : "hidden"
-        }`}
+        className={`md:hidden bg-white shadow-2xl ${isMenuOpen ? "block" : "hidden"
+          }`}
       >
         <nav className="flex flex-col space-y-4 px-4 py-4">
           <Link
